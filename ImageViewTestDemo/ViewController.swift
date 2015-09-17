@@ -10,9 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var titleLabel: UILabel!
+
+    @IBOutlet weak var teamLogo: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        teamLogo.image = UIImage(named: "bears")
+        titleLabel.text = "Da Bears"
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +25,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func onTapMeButtonPressed(sender: UIButton) {
+        teamLogo.image = UIImage(named: "packers")
+        titleLabel.text = "Cheeseheads"
+    }
 
 }
 
